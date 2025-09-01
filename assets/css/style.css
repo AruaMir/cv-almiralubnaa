@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --c-dark-bg: #211828;
+    --c-light-section-bg: #ffffff;
+    --c-text-on-light: #211828;
+    --c-text-on-dark: #E1FDFE;
+    --c-heading-on-light: #49273F;
+    --c-primary: #570210;
+    --c-secondary: #77080E;
+    --c-muted-blue: #8097B7;
+    --c-muted-purple: #706F8B;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--c-dark-bg);
+    color: var(--c-text-on-light);
+    padding-top: 20px; /* Add space at the top */
+}
+
+.navbar {
+    background-color: var(--c-primary);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    margin: 0 20px;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+    color: var(--c-text-on-dark);
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: var(--c-muted-blue);
+}
+
+/* Sections have light backgrounds to contrast with the dark body */
+.hero-section, section {
+    background-color: var(--c-light-section-bg);
+    color: var(--c-text-on-light);
+    padding: 60px 0;
+    margin: 0 20px 20px 20px; /* Creates space to see the dark body background */
+    border-radius: 8px;
+}
+
+.profile-picture {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--c-primary);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.hero-section .display-4 {
+    color: var(--c-heading-on-light);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 600;
+    color: var(--c-heading-on-light);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--c-primary);
+}
+
+.progress {
+    height: 25px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.progress-bar {
+    background-color: var(--c-secondary);
+    color: var(--c-text-on-dark);
+}
+
+.card {
+    background-color: #f8f9fa; /* Slightly off-white to distinguish from section bg */
+    border: 1px solid #ddd;
+    color: var(--c-text-on-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.card-title {
+    color: var(--c-heading-on-light);
+    font-weight: 600;
+}
+
+.card-subtitle {
+    color: var(--c-muted-purple) !important;
+}
+
+/* Portfolio Image Sizing & Lightbox Trigger */
+.card .portfolio-link {
+    display: block;
+    overflow: hidden;
+    height: 200px; /* Fixed height for the container */
+    cursor: pointer;
+}
+
+.card .portfolio-link .card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Scales the image to cover the container */
+    transition: transform 0.3s ease;
+}
+
+.card:hover .portfolio-link .card-img-top {
+    transform: scale(1.1); /* A nice little zoom effect on hover */
+}
+
+footer {
+    background-color: var(--c-heading-on-light);
+    color: var(--c-text-on-dark);
+    padding: 40px 0;
+    border-radius: 8px;
+    margin: 0 20px 20px 20px;
+}
+
+footer .section-title {
+    color: var(--c-text-on-dark);
+}
+
+footer .section-title::after {
+    background-color: var(--c-text-on-dark);
+}
+
+footer .btn-outline-light {
+    border-color: var(--c-muted-blue);
+    color: var(--c-muted-blue);
+}
+
+footer .btn-outline-light:hover {
+    background-color: var(--c-muted-blue);
+    color: var(--c-heading-on-light);
+}
